@@ -3,7 +3,7 @@ const database = require("../models");
 class ProductsController {
   static async find(req, res) {
     try {
-      const products = await database.Product.findAll();
+      const products = await database.Product.findAll({order: [['createdAt', 'DESC']]});
 
       if (!products) {
         return res.status(404).json({ error: "Products not found" });

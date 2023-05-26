@@ -4,7 +4,7 @@ const { faker } = require("@faker-js/faker");
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    for(let i = 0; i <= 100 ; i++) {
+    for(let i = 0; i <= 30 ; i++) {
       await queryInterface.bulkInsert(
         "Products",
         [
